@@ -1,0 +1,337 @@
+@import '_reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+//fonts
+$fontPlayfair: 'Playfair Display', serif;
+$fontPrata: 'Prata', serif;
+$fontRoboto: 'Roboto', sans-serif;
+
+
+//colors
+$white-light: #FDFDFB;
+$dark: #555248;
+$dark-light: #444240;
+$black-light: #1B1A17;
+$black: #000000;
+$white: #ffffff;
+
+body  {
+  font-family: $fontRoboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  overflow: hidden;
+  max-width: 1366px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.row {
+  display: flex;
+  overflow: hidden;
+  min-width: 100%;
+}
+
+.main {
+  display: flex;
+  background-color: $white-light;
+  flex-direction: column;
+  margin: 0 100px;
+  width: 100%;
+}
+
+.logo {
+  margin-right: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    margin: 29px 0;
+    display: flex;
+
+  }
+
+  &__title {
+    font-family: $fontPlayfair;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.14em;
+    color: $dark;
+    position: relative;
+  }
+
+  &__menu {
+    display: flex;
+    margin: 33px 0 26px 0;
+    &>a{
+      font-size: 14px;
+        color: $dark;
+        padding-right: 65px;
+        &:last-child {
+          padding: 0;
+        }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    margin: 43px 0 18px 0;  
+  }
+}
+
+.icon {
+  margin-right: 23px;
+  &_liked{
+    position: relative;
+    &::after {
+      display: flex;
+      content: "1";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: #E6C8B4;
+      border-radius: 50%;
+      font-size: 8px;
+      line-height: 9px;
+      justify-content: center;
+      align-items: center;
+      color: $black-light;
+      top: -5px;
+      left: 15px;
+    }
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.collection {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px 0 20px;
+  width: 100%;
+  height: 768px;
+  position: relative;
+  background: url('/img/main-background.png') 350px 0px no-repeat;
+  &__description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    justify-content: center;
+    flex: 1 1 36%;
+  }
+  &__body {
+    margin: 39px 0 64px 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 258px;
+    
+    color: rgba(27, 26, 23, 0.82);
+  }
+
+  &__example {
+    display: flex;
+    flex: 1 1 65%;
+    justify-content: space-between  ;
+  }
+  &__price {
+    margin-left: 50px;
+    margin-top: 168px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: -60px;
+      border: 1px solid #8B8371;
+      width: 50px;
+      height: 1px;
+    }
+  }
+  &__image {
+    position:absolute;
+    height: 804px;
+    left: 520px;
+  }
+  &__size {
+    align-self: flex-end;
+    margin-bottom: 116px;;
+    position: relative;
+    &:before {
+        content: "";
+        top: 10px;
+        left: -60px;
+        position: absolute;
+        border: 1px solid #8B8371;
+        width: 50px;
+        height: 1px;
+      }
+  }
+}
+
+.price {
+  font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #1B1A17;
+}
+
+.title {
+  font-family: $fontPlayfair;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 60px;
+  position: relative;
+  color: $black-light;
+  &:before {
+    content: "";
+    top: 35px;
+    left: -60px;
+    position: absolute;
+    border: 1px solid #8B8371;
+    width: 50px;
+    height: 1px;
+  }    
+}
+
+.subtitle {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  
+  color: $black-light;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 26px 38px 27px 38px;
+  color: $white;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.button_dark {
+  background: $dark-light;
+}
+
+.models {
+  margin: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__title {
+    text-align: center;
+  }
+
+  &__all {
+    align-self: flex-end;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 1px solid #C4C0B6;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: $dark-light;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+
+  &__item {
+    max-width: 370px;
+    height: 467px;
+  }
+}
+
+.title-basic {
+  font-family: $fontPlayfair;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 43px;
+  
+  color: $black-light;
+}
+
+.models-item {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 0 40px;
+  width: 100%;
+  background: #FDFDFB;
+  &__title {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    
+    color: rgba(27, 26, 23, 0.82);
+  }
+    
+  &__price {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    
+    color: rgba(27, 26, 23, 0.82);
+  }
+    
+  &__image {
+    border-radius: 50%;
+    background: linear-gradient(89.63deg, #E2D0C4 0.3%, rgba(226, 208, 196, 0) 99.67%),
+        linear-gradient(0deg, rgba(244, 230, 221, 0.41), rgba(244, 230, 221, 0.41));
+    border: 1px solid;
+    
+      border-image-source: linear-gradient(89.63deg, #E2D0C4 0.3%, rgba(226, 208, 196, 0) 99.67%);
+  }
+    
+  &__more {
+    position: relative;
+    margin-left: 50px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    
+    color: #1B1A17;
+    &:before {
+      content: "";
+      top: 10px;
+      left: -50px;
+      position: absolute;
+      border: 1px solid #8B8371;
+      width: 30px;
+      height: 1px;
+    }
+  }
+}
