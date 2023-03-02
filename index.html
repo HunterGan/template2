@@ -12,11 +12,13 @@
 <body>
   <div class="wrapper">
     <div class="row">
-      <div class="main">
+      <section class="main">
         <div class="header">
-          <div class="header__logo">
-            <img src="/img/logo.svg" alt="Logo" class="logo">
-            <p class="header__title">CONQUEST</p>
+          <div>
+            <a class="header__logo" href="">
+              <img src="/img/logo.svg" alt="Logo" class="logo">
+              <p class="header__title">CONQUEST</p>
+            </a>
           </div>
           <nav class="header__menu">
             <a href="">Каталог</a>
@@ -26,13 +28,13 @@
           </nav>
           <div class="header__icons">
             <div class="icon">
-              <img src="/img/icon-search.svg">
+              <a href=""><img src="/img/icon-search.svg"></a>
             </div>
             <div class="icon icon_liked">
-              <img src="/img/icon-likes.svg">
+              <a href=""><img src="/img/icon-likes.svg"></a>
             </div>
             <div class="icon">
-              <img src="/img/icon-cart.svg">
+              <a href=""><img src="/img/icon-cart.svg"></a>
             </div>
           </div>
         </div>
@@ -52,12 +54,12 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     <div class="row">
-      <div class="models">
+      <section class="models main">
         <p class="models__title title-basic">Популярные модели</p>
-        <p class="models__all">Смотреть все</p>
+        <a href="" class="models__all">Смотреть все</a>
         <div class="models__list ">
           <div class="models__item models-item">
             <p class="models-item__title">RADO</p>
@@ -84,11 +86,108 @@
             <a href="" class="models-item__more">Подробнее</a>
           </div>
         </div>
+      </section>
+    </div>
+    <div class="row">
+      <section class="quality">
+        <div class="quality-backgrounds">
+          <div class="quality-backgrounds__first"></div>
+          <div class="quality-backgrounds__second"></div>
+          <div class="quality-backgrounds__third"></div>
+        </div>
+        <div class="quality__banner">
+          <img src="/img/quality_banner.png" alt="banner" class="quality__image">
+          <div class="quality__number">
+            <button class="arrow arrow_left"> <img src="/img/arrow_left.png" alt=""></button>
+            <span>01</span>
+            <button class="arrow arrow_right"> <img src="/img/arrow_right.png" alt=""></button>
+          </div>
+        </div>
+        <div class="quality__description">
+          <h2 class="title-basic">Подлинное качество</h2>
+          <p class="quality__body">Все часы производятся в Швейцарии и имеют сертификаты качества. Настоящие швейцарские
+            часы — это предмет гордости и
+            престижа.</p>
+          <button class="button button_light">СМОТРЕТЬ КАТАЛОГ</button>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <section class="news">
+        <div class="news__description">
+          <h2 class="title-basic">Следите за нашими новостями</h2>
+          <div class="news__body">Подписывайтесь на <span>@conquest_watch</span> в соцсетях и узнавайте о новинках и
+            акциях первыми.
+          </div>
+          <ul class="news__icons">
+            <li class="news__icons-item">
+              <a href="">
+                <img src="/img/instagram_icon.svg" alt="">
+              </a>
+            </li>
+            <li class="news__icons-item">
+              <a href="">
+                <img src="/img/facebook_icon.svg" alt="">
+              </a>
+            </li>
+            <li class="news__icons-item">
+              <a href="">
+                <img src="/img/twitter_icon.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="news__collage">
+          <div class="news__sidebar">
+            <img src="/img/news-1.png" alt="">
+            <img src="/img/news-2.png" alt="">
+          </div>
+          <img src="/img/news-main.png" class="news__image"></img>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <div class="footer">
+        <div class="footer__column">
+          <a href="">
+            <img class="footer__logo" src="/img/logo-footer.svg" alt="">
+            <span class="footer__title-logo">CONQUEST</span>
+          </a>
+          <div class="footer__list">
+            <div class="footer__item"><a href="">8 (499) 450-47-97</a></div>
+            <div class="footer__item"><a href="">info@conquest.watch.ru</a></div>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">О КОМПАНИИ</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="">Наши магазины</a></li>
+            <li class="footer__item"><a href="">Вакансии</a></li>
+            <li class="footer__item"><a href="">Сертификаты</a></li>
+            <li class="footer__item"><a href="">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">ПОКУПАТЕЛЯМ</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="">Каталог товаров</a></li>
+            <li class="footer__item"><a href="">Как заказать?</a></li>
+            <li class="footer__item"><a href="">FAQ</a></li>
+            <li class="footer__item"><a href="">Корпоративным клиентам</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">ОПЛЛАТА И ДОСТАВКА</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="">Способы оплаты</a></li>
+            <li class="footer__item"><a href="">Время доставки</a></li>
+            <li class="footer__item"><a href="">Гарантии и ремонт</a></li>
+            <li class="footer__item"><a href="">Возврат и компенсация</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="row quality"></div>
-    <div class="row news"></div>
-    <div class="row footer"></div>
+  </div>
   </div>
   </div>
 </body>

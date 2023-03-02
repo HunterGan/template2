@@ -16,6 +16,7 @@ $dark-light: #444240;
 $black-light: #1B1A17;
 $black: #000000;
 $white: #ffffff;
+$brown: #D4B098;
 
 body  {
   font-family: $fontRoboto;
@@ -28,7 +29,6 @@ body  {
   margin: 0 auto;
   min-height: 100%;
   overflow: hidden;
-  max-width: 1366px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,8 +37,11 @@ body  {
 .row {
   display: flex;
   overflow: hidden;
-  min-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1366px;
 }
+
 
 .main {
   display: flex;
@@ -56,10 +59,10 @@ body  {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 83px;
   &__logo {
-    margin: 29px 0;
     display: flex;
-
   }
 
   &__title {
@@ -74,20 +77,16 @@ body  {
 
   &__menu {
     display: flex;
-    margin: 33px 0 26px 0;
-    &>a{
+    justify-content: space-between;
+    min-width: 420px;
+    & a {
       font-size: 14px;
-        color: $dark;
-        padding-right: 65px;
-        &:last-child {
-          padding: 0;
-        }
+      color: $dark;
     }
-  }
+}
 
   &__icons {
     display: flex;
-    margin: 43px 0 18px 0;  
   }
 }
 
@@ -146,7 +145,7 @@ body  {
   &__example {
     display: flex;
     flex: 1 1 65%;
-    justify-content: space-between  ;
+    justify-content: space-between;
   }
   &__price {
     margin-left: 50px;
@@ -224,17 +223,22 @@ body  {
 
 .button {
   align-self: flex-start;
-  padding: 26px 38px 27px 38px;
+  padding: 26px 38px 26px 38px;
   color: $white;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .button_dark {
   background: $dark-light;
+}
+
+.button_light {
+  background: $brown;
 }
 
 .models {
@@ -307,11 +311,7 @@ body  {
     
   &__image {
     border-radius: 50%;
-    background: linear-gradient(89.63deg, #E2D0C4 0.3%, rgba(226, 208, 196, 0) 99.67%),
-        linear-gradient(0deg, rgba(244, 230, 221, 0.41), rgba(244, 230, 221, 0.41));
-    border: 1px solid;
-    
-      border-image-source: linear-gradient(89.63deg, #E2D0C4 0.3%, rgba(226, 208, 196, 0) 99.67%);
+    background: url('/img/watch-ellipse.png') center no-repeat;
   }
     
   &__more {
@@ -333,5 +333,237 @@ body  {
       width: 30px;
       height: 1px;
     }
+  }
+}
+
+.quality {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 519px;
+  position: relative;
+  &__banner {
+    align-self: flex-end;
+    margin-right: 70px;
+  }
+  &__number {
+    max-width: 230px;
+    margin: 20px 0 20px auto;
+    text-align: center;
+
+    font-family: $fontPrata;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    
+    color: rgba(27, 26, 23, 0.82);
+  }
+  &__description {
+    max-width: 370px;
+    align-self: center;
+  }
+  &__body {
+    margin: 38px 0 45px 0;
+    font-size: 16px;
+    line-height: 150%;
+    color: #444240;
+  }
+}
+
+.quality-backgrounds {
+  &__first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 34%;
+
+    background-color: #F7F5EF;
+    z-index: -1;
+  }
+  &__second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: #FDFDFB;
+    z-index: -3;
+  }
+  &__third {
+    text-align: right;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+      
+    background-repeat: no-repeat;
+    background-image: url(/img/quality_ellipse.png);
+    background-position: right;
+    z-index: -2;
+  }
+}
+
+.arrow {
+  background: none;
+  &_left {
+    margin-right: 20px;
+  }
+  &_right {
+    margin-left: 20px;
+  }
+}
+
+.news {
+  display: flex;
+  width: 100%;
+  margin: 80px 100px 90px;
+  justify-content: space-between;
+  &__description {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__body {
+    max-width: 375px;
+    min-height: 150px;
+    margin: 35px 0 20px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #444240;
+    & span {
+      font-weight: 700;
+      color: #262421;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icons-item {
+    margin-right: 18px;
+  }
+
+  &__collage {
+    display: flex;
+  }
+
+  &__sidebar {
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    & img {
+      width: 242px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 0 100px;
+  justify-content: space-around;
+  background: #444240;
+  border: 2px solid #E2D0C4;
+
+  &__logo {
+    position: relative;
+    top: -10px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    margin: 79px 0 67px 0;
+    position: relative;
+  }
+
+  &__title-logo {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    
+    color: #FFFFFF;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    & > a {
+      font-size: 12px;
+      line-height: 14px;
+
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+  }
+
+  &__list {
+    margin-top: 33px;
+  }
+}
+
+@media (max-width:1200px) {
+  .row {
+    max-width: 970px;
+  }
+
+  .collection {
+    background: url('/img/main-background.png') 100px 0px no-repeat;
+    &__description {
+      flex: 1 0 50%;
+    }
+    &__image {
+      left: 260px;
+    }
+    &__price {
+      position:absolute;
+      left: 220px;
+      z-index: 10;
+    }
+    &__size {
+      &::before {
+        content: '';
+      }
+    }
+  }
+
+}
+
+@media (max-width:992px) {
+  .row {
+    max-width: 750px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    &__menu {
+      justify-content: space-around;
+      flex: 1 1 100%;
+      order: 3;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .row {
+    max-width: none;
   }
 }
